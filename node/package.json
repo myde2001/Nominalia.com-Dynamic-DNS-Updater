@@ -1,7 +1,7 @@
 {
-  "name": "dynamic-dns-register",
+  "name": "dynamic-dns-nominalia",
   "version": "1.0.0",
-  "description": "A dynamic DNS updater for register services",
+  "description": "A dynamic DNS updater for nominalia services",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
