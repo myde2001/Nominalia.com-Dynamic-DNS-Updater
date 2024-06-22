@@ -6,13 +6,13 @@ const fs = require('fs');
 
 
 if (process.argv.includes('--help') || process.argv.includes('-h')) {
-	console.log(`Create, update or delete DNS records on Register.it
+	console.log(`Create, update or delete DNS records on Nominalia.com
 
 Usage: node index.js args
 
 Args:
-  --username=USERNAME      	register.it username
-  --password=PWD           	register.it password
+  --username=USERNAME      	nominalia.com username
+  --password=PWD           	nominalia.com password
   --domain=DOMAIN          	domain of the dns to modify
   --name=RECORD_NAME       	name of the record to create/update/delete
   [--value=RECORD_VALUE]   	new value for the created/updated record
@@ -23,7 +23,7 @@ Args:
   [--debug]                	take screenshot during the process
   [--backup-csv[=path]]    	save DNS configuration csv before and after
   [--headless]             	do not start browser in headless mode
-  [--proxy=proxy-server]   	proxy to use to connect to register.it
+  [--proxy=proxy-server]   	proxy to use to connect to nominalia.com
 `);
 	return false;
 }
@@ -40,9 +40,9 @@ process.argv.slice(2).map(function (val) {
 );
 
 const defaultUA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36';
-const LOGIN_URL = 'https://controlpanel.register.it/index.html';
-const DOMAIN_URL = 'https://controlpanel.register.it/firstLevel/view.html?domain=';
-const DNS_ADVANCED_URL = 'https://controlpanel.register.it/domains/dnsAdvanced.html';
+const LOGIN_URL = 'https://controlpanel.nominalia.com/index.html';
+const DOMAIN_URL = 'https://controlpanel.nominalia.com/firstLevel/view.html?domain=';
+const DNS_ADVANCED_URL = 'https://controlpanel.nominalia.com/domains/dnsAdvanced.html';
 
 const availableRecordType = [
 	"NS",
