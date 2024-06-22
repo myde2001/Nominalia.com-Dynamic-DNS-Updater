@@ -12,7 +12,7 @@ session.cookies.get_dict()
 
 def login(usr, psw):
 
-    url = 'https://controlpanel.register.it/index.html'
+    url = 'https://controlpanel.nominalia.com/index.html'
 
     form_data = {
         'userName': usr,
@@ -25,7 +25,7 @@ def login(usr, psw):
 
     #print session.cookies.get_dict()    
 
-    response = session.get('https://www.register.it')
+    response = session.get('https://www.nominalia.com')
     cookie = session.cookies.get_dict()
 
     isLogged = cookie['cpIsLogged'] == '1LevelLogged'
@@ -35,7 +35,7 @@ def login(usr, psw):
 
 def selectDomain(domain):
 
-   url = 'https://controlpanel.register.it/firstLevel/view.html?domain='+domain
+   url = 'https://controlpanel.nominalia.com/firstLevel/view.html?domain='+domain
    
    response = session.get(url)
 
@@ -43,8 +43,8 @@ def selectDomain(domain):
 
 def changeDNS(recordName, recordType, newValue):
 
-	urlGet = 'https://controlpanel.register.it/domains/dnsAdvanced.html'
-	urlPost = 'https://controlpanel.register.it/domains/dnsAdvanced.html'
+	urlGet = 'https://controlpanel.nominalia.com/domains/dnsAdvanced.html'
+	urlPost = 'https://controlpanel.nominalia.com/domains/dnsAdvanced.html'
 
 	regexDoubleQuotes = r"([{,])(\s*)([A-Za-z0-9_\-]+?)\s*:"
 
