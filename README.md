@@ -1,5 +1,5 @@
-# Register.it-Dynamic-DNS-Updater
-Allows the dynamic updating of all the existing record, of any type, that is managed by register.it
+# Nominalia.com-Dynamic-DNS-Updater
+Allows the dynamic updating of all the existing record, of any type, that is managed by nominalia.com
 
 # 2019 Update
 
@@ -20,9 +20,9 @@ I made a few test, if you find something strange open an issue, please.
 
 Test case soon.
 
-# Dynamic DNS for register.it
+# Dynamic DNS for nominalia.com
 
-This script make some request to register.it admin pages by using python and requests library. 
+This script make some request to nominalia.com admin pages by using python and requests library. 
 
 ## What can you do with this script?
 
@@ -58,7 +58,7 @@ Note: For help you can use -h. The parameters -v is your public ip address by de
 
  - Convert in php
  - Add more modules
- - Create "api" for register.it
+ - Create "api" for nominalia.com
 
 
 I do not assume any responsibilities for the use of this script.
